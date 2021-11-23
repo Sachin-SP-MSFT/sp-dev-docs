@@ -20,7 +20,7 @@ As part of the connection to a Microsoft 365 group the site's permissions will a
 ![Site permissions after group connection](media/modernize/groupifypermissions_1.png)
 
 ## Technical implementation
-
+Note : Adding owners group via federated claim provider doesn't work through UI using people picker control. It will resolve to the members group always. PowerShell or CSOM should be explored for similar needs. 
 Each Microsoft 365 group has an unique id represented as a guid (e.g e79452da-a8cf-47c5-afbf-83c8704867c2). This guid corresponds with the object Id of the Microsoft 365 Group in Azure Active Directory and is used to construct 2 claims:
 
 - e79452da-a8cf-47c5-afbf-83c8704867c2_o: this claim represents the Microsoft 365 group owners
